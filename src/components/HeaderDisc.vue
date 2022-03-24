@@ -1,6 +1,6 @@
 <template>
-  <header class="d-flex p-3">
-      <div><i class="fa-brands fa-spotify"></i></div>
+  <header class="d-flex">
+      <div><i class="fa-brands fa-spotify p-2 px-3 "></i></div>
      </header>
 </template>
 
