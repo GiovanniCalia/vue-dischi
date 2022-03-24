@@ -1,5 +1,7 @@
 <template>
-  <header></header>
+  <header class="text-center">
+      <div></div>
+     </header>
 </template>
 
 <script>
