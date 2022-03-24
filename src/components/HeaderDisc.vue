@@ -1,6 +1,13 @@
 <template>
-  <header class="d-flex">
+  <header class="d-flex justify-content-between">
       <div><i class="fa-brands fa-spotify p-2 px-3 "></i></div>
+      <select class="mx-3 my-2 rounded" name="genere" id="select">
+        <option value="">Seleziona un genere</option>
+        <option value="rock">Rock</option>
+        <option value="pop">Pop</option>
+        <option value="jazz">Jazz</option>
+        <option value="metal">Metal</option>
+      </select>
      </header>
 </template>
 
