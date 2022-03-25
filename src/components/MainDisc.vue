@@ -19,6 +19,7 @@ export default {
   name: 'MainDisc',
   data () {
     return {
+      success: true,
       characters: null
     }
   },
