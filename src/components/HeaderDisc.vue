@@ -1,12 +1,12 @@
 <template>
   <header class="d-flex justify-content-between">
       <div><i class="fa-brands fa-spotify p-2 px-3 "></i></div>
-      <select @change="$emit('seleziona', )" class="mx-3 my-2 rounded" name="genere" id="select">
+      <select @change="$emit('seleziona', value)" v-model="value" class="mx-3 my-2 rounded" name="genere" id="select">
         <option value="">Seleziona un genere</option>
-        <option value="rock">Rock</option>
-        <option value="pop">Pop</option>
-        <option value="jazz">Jazz</option>
-        <option value="metal">Metal</option>
+        <option value="Rock">Rock</option>
+        <option value="Pop">Pop</option>
+        <option value="Jazz">Jazz</option>
+        <option value="Metal">Metal</option>
       </select>
      </header>
 </template>

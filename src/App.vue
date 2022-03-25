@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <header-disc />
+    <header-disc @seleziona="passSelezione"/>
     <main-disc />
   </div>
 </template>
@@ -14,6 +14,11 @@ export default {
   components: {
     HeaderDisc,
     MainDisc
+  },
+  methods: {
+    passSelezione (data) {
+      this.$emit('rilanciaSelezione', data)
+    }
   }
 }
 </script>
