@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header-disc :options="mapOptions"/>
-    <main-disc @pass-data="dataMain"/>
+    <main-disc @pass-data="cardsMain" :pass-genre='passGenre' />
   </div>
 </template>
 
@@ -17,18 +17,22 @@ export default {
   },
   data () {
     return {
-      characters: []
+      characters: [],
+      searchGenre: ''
     }
   },
   computed: {
     mapOptions () {
-      return this.characters.map(element => element.genre)
+      return [...new Set(this.characters.map(element => element.genre))]
     }
   },
   methods: {
-    dataMain (data) {
+    cardsMain (data) {
       this.characters = data
       console.log(data)
+    },
+    passGenre (genre) {
+      this.searchGenre = genre
     }
   }
 }
