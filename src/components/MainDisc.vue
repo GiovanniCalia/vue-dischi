@@ -27,6 +27,7 @@ export default {
       'https://flynn.boolean.careers/exercises/api/array/music')
       .then((response) => {
         this.characters = response.data.response
+        this.$emit('pass-data', this.characters)
       })
   }
 }

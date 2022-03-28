@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <header-disc @seleziona="passSelezione"/>
-    <main-disc />
+    <header-disc :options="mapOptions"/>
+    <main-disc @pass-data="dataMain"/>
   </div>
 </template>
 
@@ -17,11 +17,18 @@ export default {
   },
   data () {
     return {
-      characters: null
+      characters: []
+    }
+  },
+  computed: {
+    mapOptions () {
+      return this.characters.map(element => element.genre)
     }
   },
   methods: {
-    passSelezione (data) {
+    dataMain (data) {
+      this.characters = data
+      console.log(data)
     }
   }
 }
