@@ -15,9 +15,13 @@ export default {
     HeaderDisc,
     MainDisc
   },
+  data () {
+    return {
+      characters: null
+    }
+  },
   methods: {
     passSelezione (data) {
-      this.$emit('rilanciaSelezione', data)
     }
   }
 }

@@ -1,19 +1,22 @@
 <template>
   <header class="d-flex justify-content-between">
       <div><i class="fa-brands fa-spotify p-2 px-3 "></i></div>
-      <select @change="$emit('seleziona', value)" v-model="value" class="mx-3 my-2 rounded" name="genere" id="select">
-        <option value="">Seleziona un genere</option>
-        <option value="Rock">Rock</option>
-        <option value="Pop">Pop</option>
-        <option value="Jazz">Jazz</option>
-        <option value="Metal">Metal</option>
+      <select class="mx-3 my-2 rounded" name="genere" id="select">
+        <option value="">All</option>
+        <option  value="">Rock</option>
       </select>
      </header>
 </template>
 
 <script>
+
 export default {
-  name: 'HeaderDisc'
+  name: 'HeaderDisc',
+  data () {
+    return {
+      selectValue: 'all'
+    }
+  }
 }
 </script>
 
