@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header-disc :options="mapOptions" @selected-genre="passGenre"/>
-    <main-disc @pass-data="cardsMain" :search-genre="searchGenre" />
+    <main-disc @pass-data="cardsMain" :search="searchGenre" />
   </div>
 </template>
 

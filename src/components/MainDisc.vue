@@ -2,7 +2,7 @@
 <main>
     <div class="container py-5">
         <div class="row justify-content-center">
-          <div class="col-lg-2 col-md-4 col-sm-6 text-center mb-3 py-3 card_dark m-3" v-for="element in cardFilter" :key="element.title">
+          <div class="col-lg-2 col-md-4 col-sm-6 text-center mb-3 py-3 card_dark m-3" v-for="element in cardFiltrato" :key="element.title">
                 <img class="img-fluid mb-3" :src="element.poster" :alt="element.author">
                 <h3 class="text-uppercase mb-3">{{ element.title }}</h3>
                 <div>{{ element.author }}</div>
@@ -18,7 +18,7 @@ import axios from 'axios'
 export default {
   name: 'MainDisc',
   props: {
-    searchGenre: String
+    search: String
   },
   data () {
     return {
@@ -26,8 +26,8 @@ export default {
     }
   },
   computed: {
-    cardFilter () {
-      return this.characters.filter(element => element.genre === this.searchGenre)
+    cardFiltrato () {
+      return this.characters.filter(element => element.genre === this.search)
     }
   },
   created () {
