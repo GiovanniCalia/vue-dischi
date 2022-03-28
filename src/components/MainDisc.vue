@@ -18,11 +18,16 @@ import axios from 'axios'
 export default {
   name: 'MainDisc',
   props: {
-    passGenre: String
+    searchGenre: String
   },
   data () {
     return {
       characters: null
+    }
+  },
+  computed: {
+    cardFilter () {
+      return this.characters.filter(element => element.genre === this.searchGenre)
     }
   },
   created () {
@@ -32,11 +37,6 @@ export default {
         this.characters = response.data.response
         this.$emit('pass-data', this.characters)
       })
-  },
-  computed: {
-    cardFilter () {
-      return this.characters.filter(element => element.genre === this.passGenre)
-    }
   }
 }
 

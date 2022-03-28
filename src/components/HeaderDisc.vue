@@ -1,7 +1,7 @@
 <template>
   <header class="d-flex justify-content-between">
       <div><i class="fa-brands fa-spotify p-2 px-3 "></i></div>
-      <select class="mx-3 my-2 rounded" name="genere" id="select">
+      <select class="mx-3 my-2 rounded" name="genere" id="select" v-model="selectGenre" @change="$emit('selected-genre', selectGenre)">
         <option value="">All</option>
         <option v-for="element in options" :key="element" :value="element">{{ element }}</option>
       </select>
@@ -17,7 +17,7 @@ export default {
   },
   data () {
     return {
-      selectValue: 'all'
+      selectGenre: ''
     }
   }
 }
