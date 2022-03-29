@@ -27,7 +27,11 @@ export default {
   },
   computed: {
     cardFiltrato () {
-      return this.characters.filter(element => element.genre === this.search)
+      if (this.search === '') {
+        return this.characters
+      } else {
+        return this.characters.filter(element => element.genre === this.search)
+      }
     }
   },
   created () {
